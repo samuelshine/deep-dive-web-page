@@ -196,7 +196,7 @@ function Hero() {
         <img
           src="/kids-smiling.png"
           alt="Deep Dive worship event"
-          className="w-full h-full object-cover"
+          className="cover-img"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
       </div>
@@ -206,19 +206,19 @@ function Hero() {
         initial="hidden"
         animate="visible"
         variants={stagger}
-        className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+        className="relative z-10 text-center px-6 sm:px-4 max-w-4xl mx-auto pt-20"
       >
         <motion.img
           variants={fadeUp}
           custom={0}
           src="/deep-dive-logo.png"
           alt="Deep Dive Saturday Bible Club"
-          className="h-24 sm:h-32 md:h-40 lg:h-48 mx-auto mb-8 drop-shadow-2xl brightness-0 invert object-contain"
+          className="h-20 sm:h-28 md:h-40 lg:h-48 mx-auto mb-6 sm:mb-8 drop-shadow-2xl brightness-0 invert object-contain"
         />
         <motion.h1
           variants={fadeUp}
           custom={1}
-          className="text-xl sm:text-2xl md:text-3xl font-medium text-white leading-relaxed max-w-2xl mx-auto mb-10 drop-shadow-lg"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-white leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-10 drop-shadow-lg"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           Deep Dive is the children&apos;s ministry for kids from ages 4–14.
@@ -226,12 +226,12 @@ function Hero() {
         <motion.div
           variants={fadeUp}
           custom={2}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8"
         >
-          <a href="#visit" className="btn-pill btn-pill-primary text-lg px-8 py-4">
+          <a href="#visit" className="btn-pill btn-pill-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
             Plan Your Visit <ChevronRight className="w-5 h-5" />
           </a>
-          <a href="#about" className="btn-pill btn-pill-secondary text-lg px-8 py-4">
+          <a href="#about" className="btn-pill btn-pill-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
             Learn More
           </a>
         </motion.div>
@@ -245,7 +245,7 @@ function Hero() {
 function Mission() {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 text-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -254,7 +254,7 @@ function Mission() {
         >
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-6 sm:mb-8"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             We&apos;re dedicated to partnering with parents to lead children to become fully devoted followers of{' '}
@@ -263,7 +263,7 @@ function Mission() {
           <motion.p
             variants={fadeUp}
             custom={1}
-            className="text-lg sm:text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto"
           >
             Through age-specific lessons, activities, and small groups, children from ages 4–14
             learn biblical truths and real-life applications they can carry with them every single week at Deep Dive.
@@ -278,13 +278,13 @@ function Mission() {
 
 function NewVisitorCTA() {
   return (
-    <section id="visit" className="relative py-32 sm:py-40 overflow-hidden">
+    <section id="visit" className="relative py-20 sm:py-32 md:py-40 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <img
           src="/kids-listening.png"
           alt="Kids in Bible class"
-          className="w-full h-full object-cover"
+          className="cover-img"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-900/80 to-brand-800/90" />
       </div>
@@ -307,7 +307,7 @@ function NewVisitorCTA() {
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-4xl sm:text-5xl font-black text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           New to Deep Dive?
@@ -324,10 +324,10 @@ function NewVisitorCTA() {
           custom={3}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#" className="btn-pill bg-white text-brand-600 font-bold px-8 py-4 text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-xl">
+          <a href="#" className="btn-pill bg-white text-brand-600 font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-xl">
             Register Your Kids
           </a>
-          <a href="#schedule" className="btn-pill btn-pill-secondary px-8 py-4 text-lg flex items-center gap-2">
+          <a href="#schedule" className="btn-pill btn-pill-secondary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg flex items-center gap-2">
             Find Times & Location <ChevronRight className="w-5 h-5" />
           </a>
         </motion.div>
@@ -350,7 +350,7 @@ function PhotoGrid() {
 
   return (
     <section className="overflow-hidden">
-      <div className="grid grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {photos.map(({ src, alt }, i) => (
           <motion.div
             key={src}
@@ -363,7 +363,7 @@ function PhotoGrid() {
             <img
               src={src}
               alt={alt}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="cover-img transition-transform duration-700 group-hover:scale-105"
             />
           </motion.div>
         ))}
@@ -398,7 +398,7 @@ const features = [
 function WhatHappens() {
   return (
     <section id="what-happens" className="bg-surface-light">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -408,13 +408,13 @@ function WhatHappens() {
         >
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-16"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-10 sm:mb-16"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             What Happens in <span className="text-brand-600">Deep Dive?</span>
           </motion.h2>
 
-          <div className="space-y-20">
+          <div className="space-y-12 sm:space-y-20">
             {features.map(({ icon: Icon, color, title, desc }, i) => (
               <motion.div
                 key={title}
@@ -422,24 +422,24 @@ function WhatHappens() {
                 custom={i + 1}
                 className="flex flex-col items-center text-center"
               >
-                <div className={`w-20 h-20 ${color} rounded-full flex items-center justify-center mb-6 shadow-lg`}>
-                  <Icon className="w-9 h-9 text-white" />
+                <div className={`w-16 h-16 sm:w-20 sm:h-20 ${color} rounded-full flex items-center justify-center mb-4 sm:mb-6 shadow-lg`}>
+                  <Icon className="w-7 h-7 sm:w-9 sm:h-9 text-white" />
                 </div>
                 <h3
-                  className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   {title}
                 </h3>
-                <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
+                <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-2xl">
                   {desc}
                 </p>
               </motion.div>
             ))}
           </div>
 
-          <motion.div variants={fadeUp} custom={5} className="mt-16">
-            <a href="#parents" className="btn-pill btn-pill-primary text-lg px-10 py-4">
+          <motion.div variants={fadeUp} custom={5} className="mt-10 sm:mt-16">
+            <a href="#parents" className="btn-pill btn-pill-primary text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4">
               What to Expect <ChevronRight className="w-5 h-5" />
             </a>
           </motion.div>
@@ -477,21 +477,21 @@ const safetyItems = [
 function ParentInfo() {
   return (
     <section id="parents" className="bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "100px" }}
           variants={stagger}
         >
-          <motion.div variants={fadeUp} className="text-center mb-16">
+          <motion.div variants={fadeUp} className="text-center mb-10 sm:mb-16">
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               For <span className="text-brand-600">Parents</span>
             </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto">
               Your child&apos;s safety and growth is our top priority. Here&apos;s what you need to know.
             </p>
           </motion.div>
@@ -502,19 +502,19 @@ function ParentInfo() {
                 key={title}
                 variants={fadeUp}
                 custom={i + 1}
-                className="flex gap-5 p-6 rounded-2xl bg-surface-light hover:shadow-md transition-shadow"
+                className="flex gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-surface-light hover:shadow-md transition-shadow"
               >
-                <div className="w-14 h-14 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0">
-                  <Icon className="w-7 h-7 text-brand-600" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0">
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-brand-600" />
                 </div>
                 <div>
                   <h3
-                    className="text-lg font-bold text-gray-900 mb-1"
+                    className="text-base sm:text-lg font-bold text-gray-900 mb-1"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     {title}
                   </h3>
-                  <p className="text-gray-500 leading-relaxed">{desc}</p>
+                  <p className="text-sm sm:text-base text-gray-500 leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -529,12 +529,12 @@ function ParentInfo() {
 
 function FinalCTA() {
   return (
-    <section className="relative py-32 sm:py-40 overflow-hidden">
+    <section className="relative py-20 sm:py-32 md:py-40 overflow-hidden">
       <div className="absolute inset-0">
         <img
           src="/speaking-to-kids.png"
           alt="Teaching children"
-          className="w-full h-full object-cover"
+          className="cover-img"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-900/80 to-black/80" />
       </div>
@@ -548,7 +548,7 @@ function FinalCTA() {
       >
         <motion.h2
           variants={fadeUp}
-          className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           We&apos;d love to see <span className="text-accent-yellow">you!</span>
@@ -566,10 +566,10 @@ function FinalCTA() {
           custom={2}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#visit" className="btn-pill bg-white text-brand-600 font-bold px-10 py-4 text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-xl">
+          <a href="#visit" className="btn-pill bg-white text-brand-600 font-bold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-xl">
             Plan Your Visit <ChevronRight className="w-5 h-5 inline-block ml-1" />
           </a>
-          <a href="mailto:hello@deepdivekids.org" className="btn-pill btn-pill-secondary px-10 py-4 text-lg">
+          <a href="mailto:hello@deepdivekids.org" className="btn-pill btn-pill-secondary px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg">
             <Mail className="w-5 h-5" /> Contact Us
           </a>
         </motion.div>
